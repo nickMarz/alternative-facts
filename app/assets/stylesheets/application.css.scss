@@ -1,0 +1,143 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+// Example using 'Cerulean' bootswatch
+
+//Import bootstrap-sprockets
+@import "bootstrap-sprockets";
+
+// Import cerulean variables
+@import "bootswatch/superhero/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// And finally bootswatch style itself
+@import "bootswatch/superhero/bootswatch";
+
+// HEADER CSS
+.main-header {
+    min-height: 100px;
+    background-color: black;
+    margin-bottom: 20px;
+    
+    .blog-title {
+        text-align: center;
+    }
+    
+    p {
+        text-transform: uppercase;
+    }
+    
+    .navbar-text {
+        float:none !important;
+        margin: 20px auto
+    }
+}
+
+// LOGIN PAGE CSS
+.log-in {
+    text-align: center;
+}
+
+// SIGN UP PAGE CSS
+.sign-up {
+    text-align: center;
+}
+
+// EDIT USER INFO PAGE CSS
+.edit-sign-up {
+    text-align: center;
+}
+
+// INDEX PAGE CSS
+.index-fact-list {
+    text-align: center;
+    
+    .new-fact {
+        margin-bottom: 20px;
+    }
+    
+    .index-fact {
+        padding: 5px 0;
+        border: 2px solid white;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    0px 7px 12px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 7px 12px 0px rgba(50, 50, 50, 0.75);
+    }
+    
+    .index-button {
+        margin: 0 10px;
+    }
+    
+    .fact-date {
+        color: red;
+    }
+}
+
+// NEW fact PAGE CSS
+.new-fact {
+    text-align: center;
+    
+    #fact_content{
+        width: 350px;
+        height: 100px;
+    }
+}
+
+
+// SHOW PAGE CSS
+.show-fact {
+    text-align: center;
+    
+    .fact-content {
+        text-decoration: none;
+        font-size: 50px;
+    }
+
+    #disqus_thread {
+      margin-top: 50px;
+    }
+
+    .show-image {
+      margin: 0 auto;
+      width: 550px;
+    }
+}
+
+// EDIT PAGE CSS
+.edit-fact {
+    text-align: center;
+    
+    #fact_content {
+        width: 350px;
+        height: 100px;
+    }
+}
+
+// PASSWORD FORGET
+.password {
+  text-align: center;
+}
+
+// NOTICE 
+#notice {
+  font-size: 25px;
+}
+
+#notice, .alert {
+  text-align: center;
+}

@@ -1,0 +1,8 @@
+<div class="new-fact col-xs-12">
+  <div id="notice"><%= notice %></div>
+  <h1>New Fact</h1>
+
+  <%= render 'form', fact: @fact %>
+
+  <button class="btn btn-default back-button"><%= link_to 'Back', facts_path %></button>
+</div>

@@ -1,0 +1,23 @@
+<div class="index-fact-list col-xs-12">
+  <h3 class="new-fact btn btn-primary btn-lg"><%= link_to 'New Fact', new_fact_path %></h3>
+  <% @facts.each do |fact| %>
+    <div class="index-fact col-xs-offset-1 col-xs-10">
+      <h1 class="fact-content"><%= fact.content %></h1>
+      <h3 class="fact-date"><%= fact.created_at.to_formatted_s(:long) %></h3>
+      <button type="button" class="index-button btn btn-default">
+        <%= link_to 'Show', fact_path(fact) %>
+      </button>
+      <button type="button" class="index-button btn btn-default">
+        <%= link_to 'Edit', edit_fact_path(fact) %>
+      </button>
+      <button type="button" class="index-button btn btn-default">
+        <%= link_to 'Destroy', fact_path(fact),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </button>
+    </div>
+  <% end %>
+</div>
+  
+
+
