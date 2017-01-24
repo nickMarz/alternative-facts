@@ -7,17 +7,22 @@
       <button type="button" class="index-button btn btn-default">
         <%= link_to 'Show', fact_path(fact) %>
       </button>
-      <button type="button" class="index-button btn btn-default">
-        <%= link_to 'Edit', edit_fact_path(fact) %>
-      </button>
-      <button type="button" class="index-button btn btn-default">
-        <%= link_to 'Destroy', fact_path(fact),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-      </button>
+
+        <% if @current_user.id === fact.user.id %>
+          <button type="button" class="index-button btn btn-default">
+            <%= link_to 'Edit', edit_fact_path(fact) %>
+          </button>
+
+          <button type="button" class="index-button btn btn-default">
+            <%= link_to 'Destroy', fact_path(fact),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+          </button>
+
+        <% end %>
     </div>
   <% end %>
 </div>
-  
+
 
 
